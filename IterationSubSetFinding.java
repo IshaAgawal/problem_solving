@@ -20,7 +20,6 @@ public class IterationSubSetFinding {
 	static void findSet(int a[], int i, int n, int k) {
 		Vector<Integer> v = new Vector<Integer>();
 		int count = 0, index = 0;
-
 		while (i > 0) {
 
 			if (i % 2 != 0) {
@@ -58,6 +57,7 @@ public class IterationSubSetFinding {
 		}
 		System.out.println("Enter k");
 		int k = in.nextInt();
+		if(k > 0 && k <= n)    // To avoid calling the method if k is out of range
 		findSubSets(a, n, k);
 	}
 }
